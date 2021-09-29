@@ -4,27 +4,29 @@
  * and open the template in the editor.
  */
 
-package tspgeneticalgorithms;
+package model;
+
+import model.Point;
 
 /**
  *
  * @author Oscar Neiva
  */
 public class Tour {
-    private String label;
+    private char label;
     private Point[] points;
     private double fitness;
 
-    public Tour(String label, Point[] points) {
+    public Tour(char label, Point[] points) {
         this.label = label;
         this.points = points;
     }
     
-    public String getLabel() {
+    public char getLabel() {
         return label;
     }
 
-    public void setLabel(String label) {
+    public void setLabel(char label) {
         this.label = label;
     }
 

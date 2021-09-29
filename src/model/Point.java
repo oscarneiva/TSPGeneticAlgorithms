@@ -4,28 +4,28 @@
  * and open the template in the editor.
  */
 
-package tspgeneticalgorithms;
+package model;
 
 /**
  *
  * @author Oscar Neiva
  */
 public class Point {
-    private String label;
+    private char label;
     private int x;
     private int y;
     
-    public Point(String label, int x, int y) {
+    public Point(char label, int x, int y) {
         this.label = label;
         this.x = x;
         this.y = y;
     }
     
-    public String getLabel() {
+    public char getLabel() {
         return label;
     }
 
-    public void setLabel(String label) {
+    public void setLabel(char label) {
         this.label = label;
     }
 
