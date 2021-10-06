@@ -28,8 +28,9 @@ public class TSPGeneticAlgorithms {
 //        Tour tour = new Tour("A", points);
 //        System.out.println(tour.getFitness());
         
-        TourController tourController = new TourController();
-        tourController.generateTour(1, 20);
+        TourController tourController = new TourController(1);
+        tourController.generateTour(10);
+        tourController.getTours().get(0).getFitness();
     }
     
 }

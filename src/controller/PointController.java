@@ -19,6 +19,7 @@ import model.Point;
  * @author Oscar Neiva
  */
 public class PointController {
+    private Point point;
     private LinkedList<Point> points;
 
     public PointController(){
@@ -29,6 +30,7 @@ public class PointController {
         return points;
     }
     
+    // Generate a point that represents a city
     public void generatePoints(int number, int range){
         try{
             FileWriter fileWriter = new FileWriter("./data/points.csv", false);
@@ -41,7 +43,7 @@ public class PointController {
                 int x = random.nextInt(range+1);
                 int y = random.nextInt(range+1);
                 label = (char) (label + 1);
-                Point point = new Point(label,x,y);
+                point = new Point(label,x,y);
                 points.add(point);
                 fileWriter.write(label + "," + x + "," + y);
                 fileWriter.write(System.lineSeparator());
