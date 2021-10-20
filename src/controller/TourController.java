@@ -1,22 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package controller;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
+
 import model.Point;
 import model.Tour;
 
-/**
- *
- * @author Oscar Neiva
- */
 public class TourController {
     private PointController pointController;
     private Tour tour;
@@ -32,8 +23,6 @@ public class TourController {
     
     // Generate a population of tours
     public void generateTour(int number){
-        
-        Random random = new Random();
         pointController = new PointController();
         char label = '@'; // Character that comes before A (Dec 64)
         

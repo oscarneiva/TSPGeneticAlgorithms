@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package controller;
 
 import java.io.FileWriter;
@@ -14,10 +8,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Point;
 
-/**
- *
- * @author Oscar Neiva
- */
 public class PointController {
     private Point point;
     private LinkedList<Point> points;
