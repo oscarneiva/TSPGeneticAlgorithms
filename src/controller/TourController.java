@@ -36,23 +36,24 @@ public class TourController {
         tours = new LinkedList<>();
         for (int i = 0; i < numberOfTours; i++) {
             label = (char) (label + 1);
-            tour = new Tour(label, shuffle(points));
+            points = shuffle(points);
+            tour = new Tour(label, points);
             tours.add(tour);
         }
     }
 
-    public Point[] shuffle(Point[] points){
+    public Point[] shuffle(Point[] arr){
         Random random = new Random();
 
         for (int i = 0; i < 20; i++) {
             int x = random.nextInt(20);
             int y = random.nextInt(20);
 
-            Point aux = points[x];
-            points[x] = points[y];
-            points[y] = aux;
+            Point aux = arr[x];
+            arr[x] = arr[y];
+            arr[y] = aux;
         }
 
-        return points;
+        return arr;
     }
 }
