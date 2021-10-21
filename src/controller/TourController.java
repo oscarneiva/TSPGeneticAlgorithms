@@ -13,8 +13,8 @@ public class TourController {
     private Tour tour;
     private LinkedList<Tour> tours;
     
-    public TourController(int number){
-        generateTour(number);
+    public TourController(int numberOfTours){
+        generateTour(numberOfTours);
     }
 
     public LinkedList<Tour> getTours() {
@@ -22,7 +22,7 @@ public class TourController {
     }
     
     // Generate a population of tours
-    public void generateTour(int number){
+    public void generateTour(int numberOfTours){
         pointController = new PointController();
         char label = '@'; // Character that comes before A (Dec 64)
         
@@ -34,11 +34,25 @@ public class TourController {
         }
         
         tours = new LinkedList<>();
-        for (int i = 0; i < number; i++) {
+        for (int i = 0; i < numberOfTours; i++) {
             label = (char) (label + 1);
-            Collections.shuffle(Arrays.asList(points));
-            tour = new Tour(label, points); 
+            tour = new Tour(label, shuffle(points));
             tours.add(tour);
         }
+    }
+
+    public Point[] shuffle(Point[] points){
+        Random random = new Random();
+
+        for (int i = 0; i < 20; i++) {
+            int x = random.nextInt(20);
+            int y = random.nextInt(20);
+
+            Point aux = points[x];
+            points[x] = points[y];
+            points[y] = aux;
+        }
+
+        return points;
     }
 }

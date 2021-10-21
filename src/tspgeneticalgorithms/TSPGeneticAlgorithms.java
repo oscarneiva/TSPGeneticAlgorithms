@@ -4,6 +4,6 @@ import controller.TourController;
 
 public class TSPGeneticAlgorithms {
     public static void main(String[] args) {
-        TourController tourController = new TourController(100);
+        TourController tourController = new TourController(3);
     }
 }
