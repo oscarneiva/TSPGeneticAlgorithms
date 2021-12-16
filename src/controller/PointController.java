@@ -12,8 +12,8 @@ public class PointController {
     private Point point;
     private LinkedList<Point> points;
 
-    public PointController(){
-        generatePoints(20, 20);
+    public PointController(int number, int range){
+        generatePoints(number, range);
     }
 
     public LinkedList<Point> getPoints() {

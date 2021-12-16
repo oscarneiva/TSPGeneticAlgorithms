@@ -13,8 +13,8 @@ public class TourController {
     private Tour tour;
     private LinkedList<Tour> tours;
     
-    public TourController(int numberOfTours){
-        generateTour(numberOfTours);
+    public TourController(int numberOfTours, int numberOfPoints, int range){
+        generateTour(numberOfTours, numberOfPoints, range);
     }
 
     public LinkedList<Tour> getTours() {
@@ -22,8 +22,8 @@ public class TourController {
     }
     
     // Generate a population of tours
-    public void generateTour(int numberOfTours){
-        pointController = new PointController();
+    public void generateTour(int numberOfTours, int numberOfPoints, int range){
+        pointController = new PointController(numberOfPoints, range);
         char label = '@'; // Character that comes before A (Dec 64)
         
         int size = pointController.getPoints().size();
